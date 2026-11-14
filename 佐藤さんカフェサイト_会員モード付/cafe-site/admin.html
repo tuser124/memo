@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>管理者ページ | Cafè NEST</title>
+</head>
+<body class="app-page">
+    <div class="app-header">
+        <div class="app-header-inner">
+            <a href="index.html" class="app-logo">Cafè NEST 管理者ページ</a>
+            <div class="app-header-right">
+                <a href="index.html">サイトを見る</a>
+                <button class="btn btn-sub" onclick="logout()">ログアウト</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="app-main">
+        <div class="admin-layout">
+
+            <!-- サイドメニュー：押したボタンの data-panel と同じIDのパネルを表示する -->
+            <div class="admin-side">
+                <button class="side-btn active" data-panel="panel-menu">メニュー編集</button>
+                <button class="side-btn" data-panel="panel-reserve">予約一覧</button>
+            </div>
+
+            <div>
+                <!-- 【Lv3】メニュー編集 -->
+                <section class="admin-panel active" id="panel-menu">
+                    <div class="panel">
+                        <h2>メニュー一覧</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>画像</th><th>商品名</th><th>値段</th><th></th></tr>
+                            </thead>
+                            <tbody id="menu-list"></tbody>
+                        </table>
+                    </div>
+
+                    <!-- 編集フォーム（「編集」ボタンを押すまでは隠しておく） -->
+                    <div class="panel" id="edit-panel" style="display: none;">
+                        <h2>メニューを編集</h2>
+                        <form id="menu-form">
+                            <div class="form-row">
+                                <label for="menu-name">商品名</label>
+                                <input type="text" id="menu-name">
+                            </div>
+                            <div class="form-row">
+                                <label for="menu-price">値段（円）</label>
+                                <input type="number" id="menu-price">
+                            </div>
+                            <div class="form-row">
+                                <label for="menu-text">説明</label>
+                                <textarea id="menu-text"></textarea>
+                            </div>
+                            <p class="error-msg" id="menu-error"></p>
+                            <button type="submit" class="btn">保存する</button>
+                            <button type="button" class="btn btn-sub" onclick="closeEdit()">やめる</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- 【Lv4】予約一覧 -->
+                <section class="admin-panel" id="panel-reserve">
+                    <div class="panel">
+                        <h2>予約一覧</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>日付</th><th>時間</th><th>会員</th><th>人数</th><th>状態</th><th></th></tr>
+                            </thead>
+                            <tbody id="reserve-list"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

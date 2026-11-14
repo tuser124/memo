@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>会員ページ | Cafè NEST</title>
+</head>
+<body class="app-page">
+    <div class="app-header">
+        <div class="app-header-inner">
+            <a href="index.html" class="app-logo">Cafè NEST</a>
+            <div class="app-header-right">
+                <a href="index.html">トップ</a>
+                <button class="btn btn-sub" onclick="logout()">ログアウト</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="app-main">
+        <h1><span id="user-name"></span> さんの会員ページ</h1>
+
+        <!-- 【Lv4】席の予約 -->
+        <section class="panel" id="reserve">
+            <h2>席の予約</h2>
+            <form id="reserve-form">
+                <div class="form-grid">
+                    <div class="form-row">
+                        <label for="reserve-date">日付</label>
+                        <input type="date" id="reserve-date">
+                    </div>
+                    <div class="form-row">
+                        <label for="reserve-time">時間</label>
+                        <select id="reserve-time">
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="reserve-people">人数</label>
+                        <select id="reserve-people">
+                            <option value="1">1名</option>
+                            <option value="2">2名</option>
+                            <option value="3">3名</option>
+                            <option value="4">4名</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="error-msg" id="reserve-error"></p>
+                <button type="submit" class="btn">予約する</button>
+                <span class="sub-text">※火曜日は定休日です</span>
+            </form>
+
+            <h3>あなたの予約</h3>
+            <table class="data-table">
+                <thead>
+                    <tr><th>日付</th><th>時間</th><th>人数</th><th>状態</th><th></th></tr>
+                </thead>
+                <tbody id="reserve-list"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/member.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Cafè NEST</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo" class="header">Cafè NEST</a>
+        
+        <div id="header-inner">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#access">Access</a>
+        </nav>
+        <!-- ログイン状態によって「Login」「会員ページ」「管理者ページ」に変わる -->
+        <a href="login.html" class="login-link">Login</a>
+        </div>
+
+        <!-- スマホ幅のときだけ表示するログインボタン -->
+        <a href="login.html" class="login-link sp-login">Login</a>
+
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="sp-menu">
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="access">Access</a>
+        </nav>
+
+    </header>
+    <main>
+        <section id="hero">
+        <!--絶対値を使って画像の上に文字を載せる。z-indexを使って優先順位を定義-->
+        <img src="img/hero.png">
+        <div class="hero-content">
+        <h1>Cafè NEST</h1>
+        <p>A quiet place for your everyday.<br>
+        自分だけの時間を、少しだけ大切に。</p>
+        <a href="#menu" id="hero-text">Menuを見る　→</a>
+        </div>
+        </section>
+
+        <section id="about">
+            <img src="img/cafe_interior.png">
+            <div id="about-text">
+                <h2><span class="underline">Ab</span>out</h2> <!-- Abの部分だけ下線をｃｓｓで引く-->
+                <p>Cafè NESTは、静かに過ごしたい人のための<br>
+                小さなカフェです。<br>
+            読書をしたり、仕事をしたり、何もせずに過ごしたり。<br>
+        それぞれの時間を自由に楽しめる場所を目指しています。</p>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="menu-inner">
+                
+            <div class="menu-header">
+            <h2><span class="underline">Me</span>nu</h2>
+        <div id="menu-txt">
+            <button class="menu-btn active">All</button>
+            <button class="menu-btn">Drink</button>
+            <button class="menu-btn">Food</button>
+            </div>
+        </div>
+
+            <!-- メニューカードは、JSでデータから作る -->
+            <div id="menu-img"></div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div id="faq-wrapper">
+                    <img src="img/cafe_interior.png">
+                    
+                    <div class="inner-faq">
+                        <h2><span class="underline">FA</span>Q</h2>
+
+                    <div id="wrapper-faq">
+
+                       <div class="faq-card">
+                        <div class="faq-content">
+                            <h3>Q.Wi-Fiはありますか？</h3>
+                            <p class="faq-answer">A.無料Wi-Fiをご利用いただけます。</p>
+                        </div>
+                        <span class="faq-icon">v</span>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-content">
+                        <h3>Q.電源はありますか</h3>
+                        <p class="faq-answer">A.一部の席に電源をご用意しています。</p>
+                        </div>
+                        <span class="faq-icon">v</span>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-content">
+                        <h3>Q.予約できますか？</h3>
+                        <p class="faq-answer">A.お電話またはＷｅｂフォームからご予約いただけます。</p>
+                    </div>
+                    <span class="faq-icon">v</span>
+                </div>
+            </div>
+            
+            </div>
+            </div>
+                </section>
+
+                <div id="under">
+                <section id="access">
+                    <div id="text-access">
+                    <h2 class="under-content"><span class="underline">Ac</span>cess</h2>
+                    <h3>Cafè NEST</h3>
+                    <p>東京都○○区○○1-2-3<br>
+                        営業時間 10:00~20:00<br>
+                        定休日 火曜日</p>
+                    </div>
+
+                    <div id="img-access">
+                        <img src="img/map.png" alt="map">
+                        </div>
+                </section>
+                
+                <section id="contact">
+                        
+                        <form>
+                            <h2 class="under-content"><span class="underline">Co</span>ntact</h2>
+                            <div id="form-wrapper">
+                            <div class="wrapper-form">
+                            <label class="inner-form" for="name">名前</label>
+                            <input id="name"  type="text" name="username" placeholder="例）山田 太郎">
+                                </div>
+                                <div class="wrapper-form">
+                            <label class="inner-form" for="email">メールアドレス</label>
+                            <input id="email" type="email" name="usermail" placeholder="例）cafenest@gmail.com">
+                                    </div>
+                                    </div>
+                                    <div class="wrapper-form">
+                            <label class="inner-form" for="inquire">お問い合わせ内容</label>
+                            <textarea id="inquire" name="contact" placeholder="ご自由にご記入ください"></textarea>
+                                        </div>
+                            <button type="button" id="send">送信</button>
+                        </form>
+                </section>
+                </div>
+
+                
+    </main>
+    <footer>
+                    <div id="footer">
+
+                        <div id="footer-logo">
+                        <a href="index.html">Cafè NEST</a>
+                        </div>
+
+                        <div id="footer-center">
+                        <div id="footer-menu">
+                            <a id="footer-about" href="#about">About</a>
+                            <a id="footer-menu" href="#menu">Menu</a>
+                            <a id="footer-access" href="#access">Access</a>
+                        </div>
+                        <p id="copy-right">©2025 Cafè NEST.All nights reserved.</p>
+                        </div>
+
+                        <div id="icon">
+                            <a href="https://www.instagram.com/?hl=ja" target="_blank" rel="noopener noreferrer">
+                            <img src="img/instagram.png">
+                            </a>
+                            <a href="https://x.com/?lang=ja" target="_blank" rel="noopener noreferrer">
+                            <img src="img/x.png">
+                            </a>
+                        </div>
+
+                    </div>
+                </footer>
+<!-- 読み込む順番が大事：データ → 共通の処理 → このページの処理 -->
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

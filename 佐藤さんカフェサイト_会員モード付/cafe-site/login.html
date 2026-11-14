@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>ログイン | Cafè NEST</title>
+</head>
+<body class="app-page">
+    <div class="app-header">
+        <div class="app-header-inner">
+            <a href="index.html" class="app-logo">Cafè NEST</a>
+            <a href="index.html">トップへ戻る</a>
+        </div>
+    </div>
+
+    <main class="app-main">
+        <div class="login-box">
+            <h1>Login</h1>
+
+            <form id="login-form">
+                <div class="form-row">
+                    <label for="login-id">ID</label>
+                    <input id="login-id" type="text">
+                </div>
+                <div class="form-row">
+                    <label for="login-pass">パスワード</label>
+                    <input id="login-pass" type="password">
+                </div>
+                <p class="error-msg" id="login-error"></p>
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <div class="demo-accounts">
+                <p>練習用アカウント（デモです）</p>
+                <ul>
+                    <li>会員：member1 / 1111</li>
+                    <li>管理者：admin / admin</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
